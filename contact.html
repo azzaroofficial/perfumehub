@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Concierge & Boutiques | Azzaro Paris</title>
+  <meta name="description" content="Contact the Azzaro Paris concierge. Boutique locations in Paris, London, New York, and Colombo. Fragrance advice and FAQs.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              300: '#f7e7b4',
+              400: '#e5c158',
+              500: '#d4af37',
+              600: '#aa7c11',
+              700: '#805d0d'
+            },
+            dark: {
+              950: '#070709',
+              900: '#0c0c0f',
+              850: '#121217',
+              800: '#181820',
+              700: '#23232e'
+            }
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            editorial: ['Playfair Display', 'serif'],
+            sans: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark-950 text-zinc-100 antialiased selection:bg-gold-500 selection:text-black">
+
+  <!-- Announcement Bar -->
+  <div class="bg-gradient-to-r from-zinc-950 via-amber-950/60 to-zinc-950 border-b border-gold-500/20 py-2 px-4 text-center text-xs tracking-wider text-amber-200">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="hidden md:flex items-center gap-2 text-zinc-400">
+        <i class="fa-solid fa-certificate text-gold-500 text-[10px]"></i>
+        <span>Guaranteed 100% Authentic Azzaro Paris</span>
+      </div>
+      <div class="mx-auto flex items-center gap-2">
+        <span class="text-gold-400">✨</span>
+        <span>Free Worldwide Express Shipping On Orders Over $150</span>
+      </div>
+      <div class="hidden md:flex items-center gap-4 text-zinc-400">
+        <a href="contact.html" class="text-gold-400 font-medium">VIP Concierge</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 glass-nav transition duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <button id="mobile-menu-toggle" class="lg:hidden text-zinc-300 hover:text-gold-400 p-2">
+          <i class="fa-solid fa-bars-staggered text-xl"></i>
+        </button>
+
+        <a href="index.html" class="flex flex-col items-center group">
+          <span class="font-serif text-2xl md:text-3xl font-bold tracking-[0.25em] text-gold-gradient group-hover:scale-105 transition-transform duration-300">
+            AZZARO
+          </span>
+          <span class="text-[9px] uppercase tracking-[0.45em] text-zinc-400 font-light -mt-1">
+            PARIS • HAUTE PARFUMERIE
+          </span>
+        </a>
+
+        <nav class="hidden lg:flex items-center space-x-8 text-xs uppercase tracking-[0.2em] font-medium text-zinc-300">
+          <a href="index.html" class="hover:text-gold-400 transition pb-1">Home</a>
+          <a href="shop.html" class="hover:text-gold-400 transition pb-1">Shop All</a>
+          <a href="shop.html?category=men" class="hover:text-gold-400 transition pb-1">Men's Scents</a>
+          <a href="shop.html?category=women" class="hover:text-gold-400 transition pb-1">Women's Scents</a>
+          <a href="shop.html?category=luxury" class="hover:text-gold-400 transition pb-1">Private Reserve</a>
+          <a href="about.html" class="hover:text-gold-400 transition pb-1">Heritage</a>
+          <a href="contact.html" class="text-gold-400 border-b border-gold-400 pb-1">Boutiques</a>
+        </nav>
+
+        <div class="flex items-center space-x-5">
+          <button class="open-search-modal text-zinc-300 hover:text-gold-400 transition p-2">
+            <i class="fa-solid fa-magnifying-glass text-lg"></i>
+          </button>
+          <button class="open-cart-btn relative p-2.5 rounded-full bg-zinc-900 border border-gold-500/30 text-gold-400 hover:bg-gold-500 hover:text-black transition duration-300 flex items-center justify-center">
+            <i class="fa-solid fa-bag-shopping text-base"></i>
+            <span class="cart-badge-count hidden absolute -top-1 -right-1 w-5 h-5 bg-amber-500 text-black font-bold text-[10px] rounded-full flex items-center justify-center border-2 border-dark-950">
+              0
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="relative py-16 bg-gradient-to-b from-dark-950 via-zinc-900 to-dark-950 border-b border-zinc-800 text-center">
+    <div class="max-w-3xl mx-auto px-4 space-y-3">
+      <span class="text-xs uppercase tracking-[0.3em] text-gold-400 font-semibold">Client Relations & Ateliers</span>
+      <h1 class="text-3xl sm:text-5xl font-serif font-bold text-white">AZZARO CONCIERGE & BOUTIQUES</h1>
+      <p class="text-zinc-400 text-sm leading-relaxed">
+        Whether you desire personalized olfactory recommendations, require order tracking assistance, or wish to schedule a private boutique consultation, our team is at your service.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Section: Form & Global Boutiques -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      
+      <!-- Contact Form -->
+      <div class="lg:col-span-7 glass-panel border border-zinc-800 rounded-3xl p-8 sm:p-10 space-y-6">
+        <div>
+          <span class="text-xs uppercase tracking-widest text-gold-400 font-semibold">Send A Message</span>
+          <h2 class="font-serif text-2xl font-bold text-white mt-1">CONTACT THE OLFACTORY CONCIERGE</h2>
+          <p class="text-xs text-zinc-400 mt-1">Our Paris-based fragrance specialists typically reply within 2 to 4 hours.</p>
+        </div>
+
+        <form onsubmit="handleContactSubmit(event)" class="space-y-4 text-xs">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-zinc-400 uppercase tracking-wider mb-1 font-medium">Your Name</label>
+              <input type="text" required placeholder="Lord / Lady Sterling" class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-gold-400" />
+            </div>
+            <div>
+              <label class="block text-zinc-400 uppercase tracking-wider mb-1 font-medium">Email Address</label>
+              <input type="email" required placeholder="client@domain.com" class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-gold-400" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-zinc-400 uppercase tracking-wider mb-1 font-medium">Inquiry Purpose</label>
+            <select class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold-400">
+              <option value="recommendation">Bespoke Fragrance Recommendation</option>
+              <option value="tracking">Order & Courier Dispatch Status</option>
+              <option value="authenticity">Bottle Batch Code Verification</option>
+              <option value="private-booking">Private Boutique Booking</option>
+              <option value="wholesale">Wholesale & Luxury Partnership</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-zinc-400 uppercase tracking-wider mb-1 font-medium">Message</label>
+            <textarea rows="5" required placeholder="Describe your fragrance preferences, occasion or inquiry details..." class="w-full bg-zinc-900 border border-zinc-700 rounded-xl p-4 text-white placeholder-zinc-500 focus:outline-none focus:border-gold-400"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-4 bg-gold-gradient text-black font-semibold rounded-xl text-xs uppercase tracking-widest hover:opacity-90 transition flex items-center justify-center gap-2 shadow-lg shadow-gold-500/20">
+            <i class="fa-solid fa-paper-plane text-xs"></i>
+            <span>Transmit Inquiry to Concierge</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Quick Concierge Contacts & Flagship Locations -->
+      <div class="lg:col-span-5 space-y-6">
+        
+        <!-- Live WhatsApp / Phone Card -->
+        <div class="glass-panel border border-gold-500/30 rounded-2xl p-6 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-lg">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div>
+              <h4 class="font-serif font-bold text-white text-sm">Direct VIP WhatsApp Line</h4>
+              <p class="text-[11px] text-zinc-400">Instant chat with fragrance advisors</p>
+            </div>
+          </div>
+          <a href="https://wa.me/33142685500" target="_blank" class="block w-full py-2.5 text-center bg-zinc-900 hover:bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 rounded-xl text-xs font-semibold uppercase tracking-wider transition">
+            Chat on WhatsApp (+33 1 42 68 55 00)
+          </a>
+        </div>
+
+        <!-- Boutiques List -->
+        <div class="glass-panel border border-zinc-800 rounded-2xl p-6 space-y-6">
+          <h3 class="font-serif text-base font-bold text-white uppercase tracking-wider pb-3 border-b border-zinc-800">
+            Flagship Boutiques
+          </h3>
+
+          <!-- Paris -->
+          <div class="space-y-1 text-xs">
+            <div class="flex justify-between items-center">
+              <span class="font-bold text-gold-400">Paris Flagship Haute Boutique</span>
+              <span class="text-[10px] text-zinc-500">France</span>
+            </div>
+            <p class="text-zinc-300">65 Rue du Faubourg Saint-Honoré, 75008 Paris</p>
+            <p class="text-zinc-500 text-[11px]">Mon - Sat: 10:00 - 19:30 CET</p>
+          </div>
+
+          <!-- Colombo -->
+          <div class="space-y-1 text-xs pt-4 border-t border-zinc-800">
+            <div class="flex justify-between items-center">
+              <span class="font-bold text-gold-400">Azzaro Colombo Prestige Lounge</span>
+              <span class="text-[10px] text-zinc-500">Sri Lanka</span>
+            </div>
+            <p class="text-zinc-300">Level 2, One Galle Face Mall, Colombo 01</p>
+            <p class="text-zinc-500 text-[11px]">Daily: 10:00 - 22:00 IST • Local Delivery Available</p>
+          </div>
+
+          <!-- London -->
+          <div class="space-y-1 text-xs pt-4 border-t border-zinc-800">
+            <div class="flex justify-between items-center">
+              <span class="font-bold text-gold-400">London Mayfair Boutique</span>
+              <span class="text-[10px] text-zinc-500">United Kingdom</span>
+            </div>
+            <p class="text-zinc-300">42 New Bond Street, Mayfair, London W1S 2RY</p>
+            <p class="text-zinc-500 text-[11px]">Mon - Sat: 10:00 - 19:00 GMT</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Frequently Asked Questions (Accordion) -->
+    <div class="glass-panel border border-zinc-800 rounded-3xl p-8 sm:p-12 space-y-6">
+      <div class="text-center max-w-xl mx-auto mb-8 space-y-2">
+        <span class="text-xs uppercase tracking-[0.3em] text-gold-400 font-semibold">Everything You Need To Know</span>
+        <h2 class="text-3xl font-serif font-bold text-white">FREQUENTLY ASKED QUESTIONS</h2>
+      </div>
+
+      <div class="space-y-4 max-w-3xl mx-auto text-xs">
+        
+        <!-- FAQ 1 -->
+        <details class="group bg-zinc-900/70 border border-zinc-800 rounded-xl p-4 cursor-pointer [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium text-white group-hover:text-gold-400 transition">
+            <span class="font-serif text-sm">Are all perfumes 100% authentic Azzaro Paris creations?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-zinc-400 group-open:rotate-180 transition"></i>
+          </summary>
+          <p class="text-zinc-400 leading-relaxed mt-3 pt-3 border-t border-zinc-800/80">
+            Yes, unconditionally. Every bottle sold via our boutique is 100% genuine, imported directly from Paris in original luxury retail packaging with verified batch codes printed on the bottom of the glass flacon and outer box.
+          </p>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="group bg-zinc-900/70 border border-zinc-800 rounded-xl p-4 cursor-pointer [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium text-white group-hover:text-gold-400 transition">
+            <span class="font-serif text-sm">How long will my order take to arrive?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-zinc-400 group-open:rotate-180 transition"></i>
+          </summary>
+          <p class="text-zinc-400 leading-relaxed mt-3 pt-3 border-t border-zinc-800/80">
+            Orders are dispatched within 24 hours from our climate-controlled depot. Express courier delivery takes 2 to 4 business days worldwide. For Sri Lanka and local metropolitan regions, delivery is completed within 24 to 48 hours.
+          </p>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="group bg-zinc-900/70 border border-zinc-800 rounded-xl p-4 cursor-pointer [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium text-white group-hover:text-gold-400 transition">
+            <span class="font-serif text-sm">How do I store my Azzaro perfume to preserve maximum longevity?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-zinc-400 group-open:rotate-180 transition"></i>
+          </summary>
+          <p class="text-zinc-400 leading-relaxed mt-3 pt-3 border-t border-zinc-800/80">
+            Keep your perfume flacon away from direct sunlight, high humidity, and extreme temperature fluctuations (avoid storing in hot bathrooms). Storing the bottle in its original box or a dark vanity closet preserves the delicate top notes and sillage for up to 5+ years.
+          </p>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="group bg-zinc-900/70 border border-zinc-800 rounded-xl p-4 cursor-pointer [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-medium text-white group-hover:text-gold-400 transition">
+            <span class="font-serif text-sm">Can I test scents before purchasing a full bottle?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-zinc-400 group-open:rotate-180 transition"></i>
+          </summary>
+          <p class="text-zinc-400 leading-relaxed mt-3 pt-3 border-t border-zinc-800/80">
+            Yes! Every order of any full flacon automatically includes two complimentary 2ml luxury spray discovery vials of your choice at checkout so you can explore other creations risk-free.
+          </p>
+        </details>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Slide-out Cart Drawer -->
+  <div id="cart-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden transition-opacity duration-300"></div>
+  <aside id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-zinc-950 border-l border-gold-500/20 z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+    <div class="p-6 border-b border-zinc-800 flex items-center justify-between bg-zinc-900/50">
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-bag-shopping text-gold-400"></i>
+        <h3 class="font-serif font-bold text-white text-base tracking-wider uppercase">Your Luxury Bag</h3>
+      </div>
+      <button id="close-cart-btn" class="w-8 h-8 rounded-full bg-zinc-800 text-zinc-400 hover:text-white flex items-center justify-center transition">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="flex-1 overflow-y-auto p-6 space-y-4" id="cart-drawer-items"></div>
+    <div id="cart-drawer-empty" class="hidden flex-1 flex flex-col items-center justify-center p-8 text-center">
+      <p class="text-zinc-400 text-xs">Your bag is empty.</p>
+    </div>
+    <div id="cart-drawer-footer" class="p-6 border-t border-zinc-800 bg-zinc-900/60 space-y-4">
+      <div class="flex justify-between items-center">
+        <span class="text-xs uppercase text-zinc-400">Subtotal</span>
+        <span id="cart-drawer-subtotal" class="font-serif font-bold text-gold-400">$0.00</span>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <a href="cart.html" class="py-3 px-4 text-center rounded-xl bg-zinc-800 text-white text-xs uppercase tracking-wider">Cart</a>
+        <a href="checkout.html" class="py-3 px-4 text-center rounded-xl bg-gold-gradient text-black font-bold text-xs uppercase tracking-wider hover:opacity-90 transition">⚡ Buy Now (Checkout)</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Global Live Search Modal -->
+  <div id="search-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-start justify-center pt-20 px-4">
+    <div class="bg-zinc-950 border border-gold-500/30 rounded-2xl w-full max-w-2xl overflow-hidden shadow-2xl">
+      <div class="p-4 border-b border-zinc-800 flex items-center gap-3">
+        <i class="fa-solid fa-magnifying-glass text-gold-400 text-lg"></i>
+        <input type="text" id="global-search-input" placeholder="Search fragrances..." class="flex-1 bg-transparent text-white text-base focus:outline-none placeholder-zinc-500" />
+        <button id="close-search-modal" class="text-zinc-400 hover:text-white p-2">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      <div id="search-results-list" class="max-h-96 overflow-y-auto p-4 space-y-2"></div>
+    </div>
+  </div>
+
+  <!-- Luxury Footer -->
+  <footer class="bg-black border-t border-zinc-800/80 pt-16 pb-12 text-zinc-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-zinc-800">
+        <div class="space-y-3">
+          <span class="font-serif text-xl font-bold tracking-[0.2em] text-gold-gradient">AZZARO PARIS</span>
+          <p class="text-xs text-zinc-500">Haute Parfumerie with magnetic Mediterranean warmth since 1978.</p>
+        </div>
+        <div>
+          <h5 class="text-white font-serif uppercase tracking-wider mb-2">Explore</h5>
+          <ul class="space-y-1.5 text-zinc-400">
+            <li><a href="shop.html?category=men" class="hover:text-gold-400">Men's Fragrances</a></li>
+            <li><a href="shop.html?category=women" class="hover:text-gold-400">Women's Fragrances</a></li>
+            <li><a href="shop.html?category=luxury" class="hover:text-gold-400">Private Reserve</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-white font-serif uppercase tracking-wider mb-2">Support</h5>
+          <ul class="space-y-1.5 text-zinc-400">
+            <li><a href="cart.html" class="hover:text-gold-400">Shopping Cart</a></li>
+            <li><a href="contact.html" class="hover:text-gold-400">Customer Concierge</a></li>
+            <li><a href="about.html" class="hover:text-gold-400">House Heritage</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-white font-serif uppercase tracking-wider mb-2">Authenticity</h5>
+          <p class="text-zinc-500 text-xs">All bottles sold are authentic Azzaro Paris creations with original sealed flacons.</p>
+        </div>
+      </div>
+      <div class="pt-6 text-center text-zinc-600 text-[11px]">
+        © 2026 Azzaro Paris Parfums. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      showToast('✨ Thank you! Your message has reached the Azzaro Paris Concierge.');
+      e.target.reset();
+    }
+  </script>
+
+</body>
+</html>

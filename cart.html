@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Luxury Bag | Azzaro Paris Parfums</title>
+  <meta name="description" content="Review your selected Azzaro perfumes, choose complimentary samples, and apply VIP discount vouchers.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              300: '#f7e7b4',
+              400: '#e5c158',
+              500: '#d4af37',
+              600: '#aa7c11',
+              700: '#805d0d'
+            },
+            dark: {
+              950: '#070709',
+              900: '#0c0c0f',
+              850: '#121217',
+              800: '#181820',
+              700: '#23232e'
+            }
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            editorial: ['Playfair Display', 'serif'],
+            sans: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark-950 text-zinc-100 antialiased selection:bg-gold-500 selection:text-black">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-zinc-950 via-amber-950/60 to-zinc-950 border-b border-gold-500/20 py-2 px-4 text-center text-xs tracking-wider text-amber-200">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="hidden md:flex items-center gap-2 text-zinc-400">
+        <i class="fa-solid fa-certificate text-gold-500 text-[10px]"></i>
+        <span>Guaranteed 100% Authentic Azzaro Paris</span>
+      </div>
+      <div class="mx-auto flex items-center gap-2">
+        <span class="text-gold-400">✨</span>
+        <span>Free Worldwide Express Shipping On Orders Over $150</span>
+      </div>
+      <div class="hidden md:flex items-center gap-4 text-zinc-400">
+        <a href="contact.html" class="hover:text-gold-400 transition">VIP Concierge</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 glass-nav transition duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <button id="mobile-menu-toggle" class="lg:hidden text-zinc-300 hover:text-gold-400 p-2">
+          <i class="fa-solid fa-bars-staggered text-xl"></i>
+        </button>
+
+        <a href="index.html" class="flex flex-col items-center group">
+          <span class="font-serif text-2xl md:text-3xl font-bold tracking-[0.25em] text-gold-gradient group-hover:scale-105 transition-transform duration-300">
+            AZZARO
+          </span>
+          <span class="text-[9px] uppercase tracking-[0.45em] text-zinc-400 font-light -mt-1">
+            PARIS • HAUTE PARFUMERIE
+          </span>
+        </a>
+
+        <nav class="hidden lg:flex items-center space-x-8 text-xs uppercase tracking-[0.2em] font-medium text-zinc-300">
+          <a href="index.html" class="hover:text-gold-400 transition pb-1">Home</a>
+          <a href="shop.html" class="hover:text-gold-400 transition pb-1">Shop All</a>
+          <a href="shop.html?category=men" class="hover:text-gold-400 transition pb-1">Men's Scents</a>
+          <a href="shop.html?category=women" class="hover:text-gold-400 transition pb-1">Women's Scents</a>
+          <a href="shop.html?category=luxury" class="hover:text-gold-400 transition pb-1">Private Reserve</a>
+          <a href="about.html" class="hover:text-gold-400 transition pb-1">Heritage</a>
+          <a href="contact.html" class="hover:text-gold-400 transition pb-1">Boutiques</a>
+        </nav>
+
+        <div class="flex items-center space-x-5">
+          <button class="open-search-modal text-zinc-300 hover:text-gold-400 transition p-2">
+            <i class="fa-solid fa-magnifying-glass text-lg"></i>
+          </button>
+          <a href="cart.html" class="relative p-2.5 rounded-full bg-gold-500 text-black font-semibold flex items-center justify-center">
+            <i class="fa-solid fa-bag-shopping text-base"></i>
+            <span class="cart-badge-count hidden absolute -top-1 -right-1 w-5 h-5 bg-amber-300 text-black font-bold text-[10px] rounded-full flex items-center justify-center border-2 border-dark-950">
+              0
+            </span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Title -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between border-b border-zinc-800 pb-6">
+      <div>
+        <nav class="flex items-center gap-2 text-xs uppercase tracking-widest text-zinc-500 mb-2">
+          <a href="index.html" class="hover:text-gold-400">Home</a>
+          <span>/</span>
+          <span class="text-gold-400">Shopping Bag</span>
+        </nav>
+        <h1 class="text-3xl sm:text-4xl font-serif font-bold text-white">YOUR LUXURY SELECTION</h1>
+      </div>
+      <div class="mt-3 sm:mt-0 text-xs text-zinc-400">
+        Review flacons before proceeding to secure courier dispatch
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Cart Section -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+    
+    <!-- Empty Cart Notification -->
+    <div id="cart-page-empty" class="hidden glass-panel border border-zinc-800 rounded-3xl p-16 text-center space-y-5 max-w-2xl mx-auto my-12">
+      <div class="w-20 h-20 rounded-full bg-zinc-900 border border-gold-500/20 text-gold-400 flex items-center justify-center text-3xl mx-auto">
+        <i class="fa-solid fa-bag-shopping"></i>
+      </div>
+      <h3 class="font-serif text-2xl font-bold text-white">Your Shopping Bag is Currently Empty</h3>
+      <p class="text-zinc-400 text-sm max-w-md mx-auto">
+        Discover the intoxicating world of Azzaro fragrances. Choose from our spicy ambers, Mediterranean aquatics, and Private Reserve blends.
+      </p>
+      <a href="shop.html" class="inline-block px-8 py-3.5 bg-gold-gradient text-black font-semibold rounded-xl text-xs uppercase tracking-wider hover:opacity-90 transition shadow-lg shadow-gold-500/20">
+        Explore Fragrance Catalogue
+      </a>
+    </div>
+
+    <!-- Active Cart Layout -->
+    <div id="cart-page-content" class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      
+      <!-- Left Column: Itemized List & Free Samples -->
+      <div class="lg:col-span-8 space-y-8">
+        
+        <!-- Free Shipping Tracker -->
+        <div class="glass-panel border border-gold-500/30 rounded-2xl p-5">
+          <div class="flex justify-between items-center text-xs mb-2">
+            <span class="font-semibold text-white uppercase tracking-wider flex items-center gap-2">
+              <i class="fa-solid fa-truck-fast text-gold-400"></i> Worldwide Delivery Privilege
+            </span>
+            <span id="shipping-progress-text" class="text-gold-300 font-medium">Calculating...</span>
+          </div>
+          <div class="w-full bg-zinc-800 h-2 rounded-full overflow-hidden">
+            <div id="shipping-progress-bar" class="bg-gold-gradient h-full w-0 transition-all duration-500"></div>
+          </div>
+        </div>
+
+        <!-- Products Table / List -->
+        <div class="glass-panel border border-zinc-800 rounded-2xl p-6">
+          <div class="hidden sm:grid grid-cols-12 pb-4 border-b border-zinc-800 text-[11px] uppercase tracking-wider font-semibold text-zinc-400">
+            <div class="col-span-6">Fragrance</div>
+            <div class="col-span-2 text-center">Volume Price</div>
+            <div class="col-span-2 text-center">Quantity</div>
+            <div class="col-span-2 text-right">Subtotal</div>
+          </div>
+
+          <div id="cart-page-items-list" class="divide-y divide-zinc-800">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+
+        <!-- Complimentary Samples Selector -->
+        <div class="glass-panel border border-zinc-800 rounded-2xl p-6 space-y-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="text-[10px] uppercase tracking-widest text-gold-400 font-semibold">House Privilege</span>
+              <h4 class="font-serif text-lg font-bold text-white">Choose 2 Complimentary 2ml Discovery Sprays</h4>
+            </div>
+            <span class="text-xs px-2.5 py-1 rounded bg-amber-500/10 text-gold-300 border border-gold-500/30">Free with Order</span>
+          </div>
+
+          <p class="text-xs text-zinc-400">Select two signature mini testers to be hand-packed in luxury satin pouch with your delivery:</p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-gold-500/40 cursor-pointer">
+              <input type="checkbox" checked class="accent-amber-500 rounded">
+              <div>
+                <span class="text-xs font-semibold text-white block">Azzaro The Most Wanted Parfum (2ml)</span>
+                <span class="text-[10px] text-zinc-500">Woody Amber & Caramel</span>
+              </div>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-gold-500/40 cursor-pointer">
+              <input type="checkbox" checked class="accent-amber-500 rounded">
+              <div>
+                <span class="text-xs font-semibold text-white block">Azzaro Chrome Pure (2ml)</span>
+                <span class="text-[10px] text-zinc-500">Mediterranean Sea Breeze & Mandarin</span>
+              </div>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-gold-500/40 cursor-pointer">
+              <input type="checkbox" class="accent-amber-500 rounded">
+              <div>
+                <span class="text-xs font-semibold text-white block">Azzaro Wanted Girl Tonic (2ml)</span>
+                <span class="text-[10px] text-zinc-500">Ginger Flower & Dulce De Leche</span>
+              </div>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-gold-500/40 cursor-pointer">
+              <input type="checkbox" class="accent-amber-500 rounded">
+              <div>
+                <span class="text-xs font-semibold text-white block">Azzaro Oud Imperial Reserve (2ml)</span>
+                <span class="text-[10px] text-zinc-500">Cambodian Agarwood & Smoky Leather</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Order Summary & Voucher -->
+      <div class="lg:col-span-4 space-y-6">
+        
+        <div class="glass-panel border border-gold-500/30 rounded-2xl p-6 space-y-6 shadow-2xl">
+          <h3 class="font-serif text-lg font-bold text-white uppercase tracking-wider pb-3 border-b border-zinc-800">
+            Order Summary
+          </h3>
+
+          <!-- Promo Voucher Form -->
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-zinc-400 font-medium mb-2">VIP Privilege Voucher:</label>
+            <div class="flex gap-2">
+              <input type="text" id="coupon-code-input" placeholder="e.g. AZZARO10 or PARIS20" class="flex-1 bg-zinc-900 border border-zinc-700 rounded-xl px-3 py-2.5 text-xs text-white uppercase placeholder-zinc-500 focus:outline-none focus:border-gold-400" />
+              <button onclick="handleApplyCoupon()" class="px-4 py-2.5 bg-zinc-800 hover:bg-gold-500 hover:text-black text-gold-400 font-semibold text-xs rounded-xl transition uppercase tracking-wider">
+                Apply
+              </button>
+            </div>
+            <!-- Active coupon badge -->
+            <div id="active-coupon-badge" class="hidden mt-2 p-2 bg-amber-500/10 border border-gold-500/30 rounded-lg flex items-center justify-between text-xs text-gold-300">
+              <span id="active-coupon-text"></span>
+              <button onclick="handleRemoveCoupon()" class="text-zinc-400 hover:text-rose-400 text-xs ml-2">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Total Calculation Breakdown -->
+          <div class="space-y-3 pt-3 border-t border-zinc-800 text-xs">
+            <div class="flex justify-between text-zinc-300">
+              <span>Items Subtotal:</span>
+              <span id="summary-subtotal" class="font-semibold text-white">$0.00</span>
+            </div>
+            <div id="summary-discount-row" class="hidden flex justify-between text-emerald-400">
+              <span>Privilege Voucher:</span>
+              <span id="summary-discount" class="font-semibold">-$0.00</span>
+            </div>
+            <div class="flex justify-between text-zinc-300">
+              <span>Estimated Luxury Tax (5%):</span>
+              <span id="summary-tax" class="font-semibold text-white">$0.00</span>
+            </div>
+            <div class="flex justify-between text-zinc-300">
+              <span>Courier Delivery:</span>
+              <span id="summary-shipping" class="font-semibold text-white">$0.00</span>
+            </div>
+            <div class="pt-4 border-t border-zinc-800 flex justify-between items-baseline">
+              <span class="font-serif text-base font-bold text-white uppercase tracking-wider">Estimated Total:</span>
+              <span id="summary-total" class="font-serif text-2xl font-bold text-gold-400">$0.00</span>
+            </div>
+          </div>
+
+          <!-- Checkout CTA -->
+          <div class="pt-2">
+            <a href="checkout.html" class="w-full py-4 bg-gold-gradient text-black font-bold rounded-xl text-xs uppercase tracking-widest hover:opacity-95 transition flex items-center justify-center gap-2 shadow-xl shadow-gold-500/30">
+              <i class="fa-solid fa-bolt text-xs"></i>
+              <span>BUY NOW / PROCEED TO CHECKOUT</span>
+              <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+            </a>
+          </div>
+
+          <!-- Security note -->
+          <div class="pt-2 text-center space-y-2 border-t border-zinc-800/80">
+            <div class="flex justify-center items-center gap-3 text-zinc-500 text-lg">
+              <i class="fa-brands fa-cc-visa"></i>
+              <i class="fa-brands fa-cc-mastercard"></i>
+              <i class="fa-brands fa-cc-amex"></i>
+              <i class="fa-brands fa-apple-pay"></i>
+            </div>
+            <p class="text-[10px] text-zinc-500">256-bit SSL encrypted checkout. Temperature-controlled courier packaging.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Luxury Footer -->
+  <footer class="bg-black border-t border-zinc-800/80 pt-16 pb-12 text-zinc-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-zinc-800">
+        <div class="space-y-3">
+          <span class="font-serif text-xl font-bold tracking-[0.2em] text-gold-gradient">AZZARO PARIS</span>
+          <p class="text-xs text-zinc-500">Haute Parfumerie with magnetic Mediterranean warmth since 1978.</p>
+        </div>
+        <div>
+          <h5 class="text-white font-serif uppercase tracking-wider mb-2">Explore</h5>
+          <ul class="space-y-1.5 text-zinc-400">
+            <li><a href="shop.html?category=men" class="hover:text-gold-400">Men's Fragrances</a></li>
+            <li><a href="shop.html?category=women" class="hover:text-gold-400">Women's Fragrances</a></li>
+            <li><a href="shop.html?category=luxury" class="hover:text-gold-400">Private Reserve</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-white font-serif uppercase tracking-wider mb-2">Support</h5>
+          <ul class="space-y-1.5 text-zinc-400">
+            <li><a href="cart.html" class="hover:text-gold-400">Shopping Cart</a></li>
+            <li><a href="contact.html" class="hover:text-gold-400">Customer Concierge</a></li>
+            <li><a href="about.html" class="hover:text-gold-400">House Heritage</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-white font-serif uppercase tracking-wider mb-2">Authenticity</h5>
+          <p class="text-zinc-500 text-xs">All bottles sold are authentic Azzaro Paris creations with original sealed flacons.</p>
+        </div>
+      </div>
+      <div class="pt-6 text-center text-zinc-600 text-[11px]">
+        © 2026 Azzaro Paris Parfums. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Dedicated Cart Page Controller -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCartPage();
+    });
+
+    function renderCartPage() {
+      const cart = getCart();
+      const emptyContainer = document.getElementById('cart-page-empty');
+      const contentContainer = document.getElementById('cart-page-content');
+      const itemsList = document.getElementById('cart-page-items-list');
+
+      if (cart.length === 0) {
+        if (emptyContainer) emptyContainer.classList.remove('hidden');
+        if (contentContainer) contentContainer.classList.add('hidden');
+        return;
+      }
+
+      if (emptyContainer) emptyContainer.classList.add('hidden');
+      if (contentContainer) contentContainer.classList.remove('hidden');
+
+      itemsList.innerHTML = cart.map(item => `
+        <div class="py-6 flex flex-col sm:grid sm:grid-cols-12 gap-4 items-center">
+          <!-- Product image and title -->
+          <div class="w-full sm:col-span-6 flex items-center gap-4">
+            <img src="${item.image}" alt="${item.name}" class="w-20 h-24 object-contain rounded-xl bg-zinc-900 p-2 border border-zinc-800" />
+            <div>
+              <h3 class="font-serif font-bold text-white text-base leading-tight">${item.name}</h3>
+              <p class="text-xs text-zinc-400">${item.subtitle}</p>
+              <span class="inline-block mt-1 text-[11px] text-amber-300/90 font-medium px-2 py-0.5 rounded bg-amber-500/10 border border-gold-500/20">
+                Flacon Volume: ${item.size}
+              </span>
+            </div>
+          </div>
+
+          <!-- Unit Price -->
+          <div class="hidden sm:block sm:col-span-2 text-center text-sm font-semibold text-zinc-300">
+            $${item.price.toFixed(2)}
+          </div>
+
+          <!-- Quantity Controls -->
+          <div class="w-full sm:w-auto sm:col-span-2 flex items-center justify-between sm:justify-center gap-2">
+            <div class="flex items-center border border-zinc-700 rounded-xl bg-zinc-900 overflow-hidden">
+              <button onclick="updateCartQuantity('${item.id}', '${item.size}', -1); renderCartPage();" class="w-8 h-8 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 text-sm transition">-</button>
+              <span class="w-8 text-center text-xs font-bold text-white">${item.quantity}</span>
+              <button onclick="updateCartQuantity('${item.id}', '${item.size}', 1); renderCartPage();" class="w-8 h-8 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 text-sm transition">+</button>
+            </div>
+            <button onclick="removeFromCart('${item.id}', '${item.size}'); renderCartPage();" class="text-zinc-500 hover:text-rose-400 text-sm transition sm:ml-2" title="Remove item">
+              <i class="fa-regular fa-trash-can"></i>
+            </button>
+          </div>
+
+          <!-- Line Subtotal -->
+          <div class="w-full sm:w-auto sm:col-span-2 flex sm:justify-end justify-between items-center text-right">
+            <span class="sm:hidden text-xs text-zinc-400">Total:</span>
+            <span class="font-serif font-bold text-gold-400 text-base">
+              $${(item.price * item.quantity).toFixed(2)}
+            </span>
+          </div>
+        </div>
+      `).join('');
+
+      updateCartSummary();
+    }
+
+    function updateCartSummary() {
+      const totals = getCartTotals();
+
+      document.getElementById('summary-subtotal').textContent = `$${totals.subtotal}`;
+      document.getElementById('summary-tax').textContent = `$${totals.tax}`;
+      document.getElementById('summary-shipping').textContent = totals.shipping === '0.00' ? 'FREE Express' : `$${totals.shipping}`;
+      document.getElementById('summary-total').textContent = `$${totals.total}`;
+
+      // Shipping progress
+      const subtotalNum = parseFloat(totals.subtotal);
+      const progressBar = document.getElementById('shipping-progress-bar');
+      const progressText = document.getElementById('shipping-progress-text');
+
+      if (subtotalNum >= 150) {
+        progressBar.style.width = '100%';
+        progressText.innerHTML = '<span class="text-emerald-400 font-semibold">✨ You Qualified for Free Express Shipping!</span>';
+      } else {
+        const pct = Math.min(100, (subtotalNum / 150) * 100);
+        progressBar.style.width = `${pct}%`;
+        const diff = (150 - subtotalNum).toFixed(2);
+        progressText.innerHTML = `Add <strong class="text-gold-400">$${diff}</strong> more for Free Shipping`;
+      }
+
+      // Coupon Badge
+      const coupon = getActiveCoupon();
+      const discountRow = document.getElementById('summary-discount-row');
+      const couponBadge = document.getElementById('active-coupon-badge');
+
+      if (coupon && parseFloat(totals.discount) > 0) {
+        discountRow.classList.remove('hidden');
+        document.getElementById('summary-discount').textContent = `-$${totals.discount}`;
+        couponBadge.classList.remove('hidden');
+        document.getElementById('active-coupon-text').textContent = `Code ${coupon.code} applied (${coupon.label})`;
+      } else {
+        discountRow.classList.add('hidden');
+        couponBadge.classList.add('hidden');
+      }
+    }
+
+    function handleApplyCoupon() {
+      const codeInput = document.getElementById('coupon-code-input');
+      if (codeInput && codeInput.value) {
+        applyCoupon(codeInput.value);
+        codeInput.value = '';
+        renderCartPage();
+      }
+    }
+
+    function handleRemoveCoupon() {
+      removeCoupon();
+      renderCartPage();
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfume Details | Azzaro Paris Parfums</title>
+  <meta name="description" content="Detailed scent pyramid, longevity, notes, and bottle sizes for Azzaro luxury perfumes.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              300: '#f7e7b4',
+              400: '#e5c158',
+              500: '#d4af37',
+              600: '#aa7c11',
+              700: '#805d0d'
+            },
+            dark: {
+              950: '#070709',
+              900: '#0c0c0f',
+              850: '#121217',
+              800: '#181820',
+              700: '#23232e'
+            }
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            editorial: ['Playfair Display', 'serif'],
+            sans: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark-950 text-zinc-100 antialiased selection:bg-gold-500 selection:text-black">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-zinc-950 via-amber-950/60 to-zinc-950 border-b border-gold-500/20 py-2 px-4 text-center text-xs tracking-wider text-amber-200">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="hidden md:flex items-center gap-2 text-zinc-400">
+        <i class="fa-solid fa-certificate text-gold-500 text-[10px]"></i>
+        <span>Guaranteed 100% Authentic Azzaro Paris</span>
+      </div>
+      <div class="mx-auto flex items-center gap-2">
+        <span class="text-gold-400">✨</span>
+        <span>Free Worldwide Express Shipping On Orders Over $150</span>
+      </div>
+      <div class="hidden md:flex items-center gap-4 text-zinc-400">
+        <a href="contact.html" class="hover:text-gold-400 transition">VIP Concierge</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="sticky top-0 z-40 glass-nav transition duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <button id="mobile-menu-toggle" class="lg:hidden text-zinc-300 hover:text-gold-400 p-2">
+          <i class="fa-solid fa-bars-staggered text-xl"></i>
+        </button>
+
+        <a href="index.html" class="flex flex-col items-center group">
+          <span class="font-serif text-2xl md:text-3xl font-bold tracking-[0.25em] text-gold-gradient group-hover:scale-105 transition-transform duration-300">
+            AZZARO
+          </span>
+          <span class="text-[9px] uppercase tracking-[0.45em] text-zinc-400 font-light -mt-1">
+            PARIS • HAUTE PARFUMERIE
+          </span>
+        </a>
+
+        <nav class="hidden lg:flex items-center space-x-8 text-xs uppercase tracking-[0.2em] font-medium text-zinc-300">
+          <a href="index.html" class="hover:text-gold-400 transition pb-1">Home</a>
+          <a href="shop.html" class="hover:text-gold-400 transition pb-1">Shop All</a>
+          <a href="shop.html?category=men" class="hover:text-gold-400 transition pb-1">Men's Scents</a>
+          <a href="shop.html?category=women" class="hover:text-gold-400 transition pb-1">Women's Scents</a>
+          <a href="shop.html?category=luxury" class="hover:text-gold-400 transition pb-1">Private Reserve</a>
+          <a href="about.html" class="hover:text-gold-400 transition pb-1">Heritage</a>
+          <a href="contact.html" class="hover:text-gold-400 transition pb-1">Boutiques</a>
+        </nav>
+
+        <div class="flex items-center space-x-5">
+          <button class="open-search-modal text-zinc-300 hover:text-gold-400 transition p-2" title="Search Fragrance">
+            <i class="fa-solid fa-magnifying-glass text-lg"></i>
+          </button>
+          <button class="open-cart-btn relative p-2.5 rounded-full bg-zinc-900 border border-gold-500/30 text-gold-400 hover:bg-gold-500 hover:text-black transition duration-300 flex items-center justify-center">
+            <i class="fa-solid fa-bag-shopping text-base"></i>
+            <span class="cart-badge-count hidden absolute -top-1 -right-1 w-5 h-5 bg-amber-500 text-black font-bold text-[10px] rounded-full flex items-center justify-center border-2 border-dark-950">
+              0
+            </span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-zinc-950 border-b border-gold-500/20 px-6 py-6 space-y-4">
+      <div class="flex justify-between items-center pb-3 border-b border-zinc-800">
+        <span class="text-xs uppercase tracking-widest text-gold-400 font-semibold">Navigation</span>
+        <button id="close-mobile-menu" class="text-zinc-400 hover:text-white">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      <div class="flex flex-col space-y-3 text-sm tracking-widest uppercase font-medium text-zinc-300">
+        <a href="index.html" class="hover:text-gold-400">Home</a>
+        <a href="shop.html" class="hover:text-gold-400">Shop All Fragrances</a>
+        <a href="shop.html?category=men" class="hover:text-gold-400">Men's Collection</a>
+        <a href="shop.html?category=women" class="hover:text-gold-400">Women's Collection</a>
+        <a href="shop.html?category=luxury" class="hover:text-gold-400">Private Reserve</a>
+        <a href="about.html" class="hover:text-gold-400">House of Azzaro</a>
+        <a href="cart.html" class="hover:text-gold-400">View Bag</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+    <nav class="flex items-center gap-2 text-xs uppercase tracking-widest text-zinc-500">
+      <a href="index.html" class="hover:text-gold-400 transition">Home</a>
+      <span>/</span>
+      <a href="shop.html" class="hover:text-gold-400 transition">Fragrance Catalogue</a>
+      <span>/</span>
+      <span id="breadcrumb-product-name" class="text-gold-400 font-semibold">Loading...</span>
+    </nav>
+  </section>
+
+  <!-- Main Product Detail View -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      
+      <!-- Left Column: Gallery & Flacon Visualizer -->
+      <div class="lg:col-span-6 space-y-6">
+        <div class="glass-panel border border-gold-500/30 rounded-3xl p-8 flex items-center justify-center relative bg-gradient-to-b from-zinc-900/60 to-zinc-950 overflow-hidden shadow-2xl">
+          <span id="detail-badge" class="absolute top-5 left-5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-black shadow">
+            Bestseller
+          </span>
+          <img id="detail-main-img" src="" alt="Azzaro Perfume Bottle" class="max-h-[460px] object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.9)] transition-all duration-500 hover:scale-105" />
+        </div>
+
+        <!-- Thumbnails -->
+        <div id="detail-thumbnails" class="flex gap-4 justify-center">
+          <!-- Thumbnails injected by JS -->
+        </div>
+
+        <!-- Guarantee Strip -->
+        <div class="grid grid-cols-3 gap-3 text-center pt-2">
+          <div class="p-3 bg-zinc-900/70 border border-zinc-800 rounded-xl">
+            <i class="fa-solid fa-medal text-gold-400 text-base mb-1 block"></i>
+            <span class="text-[10px] uppercase font-semibold text-zinc-300 block">100% Authentic</span>
+            <span class="text-[9px] text-zinc-500">Direct Paris Import</span>
+          </div>
+          <div class="p-3 bg-zinc-900/70 border border-zinc-800 rounded-xl">
+            <i class="fa-solid fa-truck-fast text-gold-400 text-base mb-1 block"></i>
+            <span class="text-[10px] uppercase font-semibold text-zinc-300 block">Express Delivery</span>
+            <span class="text-[9px] text-zinc-500">2-4 Business Days</span>
+          </div>
+          <div class="p-3 bg-zinc-900/70 border border-zinc-800 rounded-xl">
+            <i class="fa-solid fa-vial text-gold-400 text-base mb-1 block"></i>
+            <span class="text-[10px] uppercase font-semibold text-zinc-300 block">Free 2ml Samples</span>
+            <span class="text-[9px] text-zinc-500">2 Vials with Flacon</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Scent Details & Buying Options -->
+      <div class="lg:col-span-6 space-y-6">
+        <div>
+          <div class="flex items-center gap-3">
+            <span id="detail-family" class="text-xs uppercase tracking-widest text-gold-400 font-semibold px-2.5 py-1 bg-amber-500/10 rounded-md border border-gold-500/30">
+              Woody Amber
+            </span>
+            <div class="flex items-center gap-1.5 text-amber-400 text-xs">
+              <span id="detail-stars"></span>
+              <span id="detail-rating-text" class="text-zinc-400 font-medium ml-1">4.9 (428 reviews)</span>
+            </div>
+          </div>
+
+          <h1 id="detail-name" class="font-serif text-3xl sm:text-4xl font-bold text-white mt-3">Azzaro The Most Wanted</h1>
+          <p id="detail-subtitle" class="text-sm text-zinc-400 mt-1">Eau de Parfum Intense</p>
+        </div>
+
+        <!-- Price Section -->
+        <div class="flex items-baseline gap-4 py-3 border-y border-zinc-800/80">
+          <span id="detail-price" class="text-3xl font-serif font-bold text-gold-400">$128.00</span>
+          <span id="detail-orig-price" class="text-base text-zinc-500 line-through">$155.00</span>
+          <span class="text-xs text-emerald-400 font-medium px-2 py-0.5 bg-emerald-500/10 rounded border border-emerald-500/20">In Stock • Ready to Dispatch</span>
+        </div>
+
+        <!-- Description -->
+        <p id="detail-desc" class="text-zinc-300 text-sm leading-relaxed">
+          Loading perfume description...
+        </p>
+
+        <!-- Size Selection -->
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-zinc-300 font-semibold mb-2">Select Flacon Volume:</label>
+          <div id="detail-sizes-container" class="flex flex-wrap gap-3">
+            <!-- Buttons dynamically generated -->
+          </div>
+        </div>
+
+        <!-- Quantity & Buy / Add Buttons -->
+        <div class="space-y-3 pt-2">
+          <div class="flex items-center gap-4">
+            <!-- Quantity Counter -->
+            <div class="flex items-center border border-zinc-700 rounded-xl bg-zinc-900 overflow-hidden shrink-0">
+              <button onclick="changeQty(-1)" class="w-10 h-12 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 text-base font-semibold transition">-</button>
+              <span id="detail-qty" class="w-12 text-center text-white font-bold text-sm">1</span>
+              <button onclick="changeQty(1)" class="w-10 h-12 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 text-base font-semibold transition">+</button>
+            </div>
+
+            <!-- Prominent BUY NOW Button -->
+            <button onclick="handleDetailInstantOrderModal()" class="flex-1 py-3.5 px-6 bg-gold-gradient text-black font-bold rounded-xl text-xs uppercase tracking-wider hover:opacity-95 transition flex items-center justify-center gap-2 shadow-xl shadow-gold-500/30">
+              <i class="fa-solid fa-bolt text-sm"></i>
+              <span>⚡ BUY NOW / දැන් මිලදී ගන්න</span>
+            </button>
+          </div>
+
+          <!-- Secondary Actions -->
+          <div class="grid grid-cols-2 gap-3">
+            <button id="detail-add-btn" onclick="handleDetailAddToCart()" class="py-3 px-4 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-zinc-200 font-semibold rounded-xl text-xs uppercase tracking-wider transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-bag-shopping text-gold-400"></i>
+              <span>+ Add To Bag</span>
+            </button>
+            <button onclick="handleDetailInstantBuy()" class="py-3 px-4 bg-zinc-900 hover:bg-zinc-800 border border-gold-500/40 text-gold-300 font-semibold rounded-xl text-xs uppercase tracking-wider transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-credit-card text-gold-400"></i>
+              <span>Full Checkout Page →</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Scent Performance Meters -->
+        <div class="p-5 bg-zinc-900/60 rounded-2xl border border-zinc-800 space-y-4 text-xs">
+          <h4 class="font-serif uppercase tracking-wider text-white font-semibold">Fragrance Performance Metrics</h4>
+          
+          <div>
+            <div class="flex justify-between text-zinc-400 mb-1">
+              <span>Longevity on Skin & Fabrics</span>
+              <span id="detail-longevity" class="text-gold-400 font-semibold">12+ Hours</span>
+            </div>
+            <div class="w-full bg-zinc-800 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-gradient-to-r from-amber-600 to-gold-400 h-full w-[95%]"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-zinc-400 mb-1">
+              <span>Sillage & Projection</span>
+              <span id="detail-sillage" class="text-gold-400 font-semibold">Enormous / Magnetic</span>
+            </div>
+            <div class="w-full bg-zinc-800 h-1.5 rounded-full overflow-hidden">
+              <div class="bg-gradient-to-r from-amber-600 to-gold-400 h-full w-[90%]"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-zinc-400">
+              <span>Recommended Occasion & Season:</span>
+              <span id="detail-season" class="text-zinc-200 font-medium">Evening / Fall / Winter</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Scent Pyramid Section -->
+    <div class="mt-20 pt-16 border-t border-zinc-800">
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+        <span class="text-xs uppercase tracking-[0.3em] text-gold-400 font-semibold">The Olfactory Architecture</span>
+        <h2 class="text-2xl sm:text-4xl font-serif font-bold text-white">THE SCENT PYRAMID</h2>
+        <p class="text-xs text-zinc-400">Experience how this creation develops through opening, heart notes, and deep base dry-down.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Top Notes -->
+        <div class="glass-panel border border-zinc-800 p-6 rounded-2xl text-center space-y-3">
+          <div class="w-12 h-12 rounded-full bg-amber-500/10 border border-gold-500/30 text-gold-400 mx-auto flex items-center justify-center text-lg">
+            <i class="fa-solid fa-wind"></i>
+          </div>
+          <span class="text-[10px] uppercase tracking-widest text-gold-400 font-semibold block">Opening • 0 to 30 mins</span>
+          <h4 class="font-serif text-lg font-bold text-white">Top Notes</h4>
+          <div id="detail-top-notes" class="text-xs text-zinc-300 space-y-1"></div>
+        </div>
+
+        <!-- Heart Notes -->
+        <div class="glass-panel border border-gold-500/40 p-6 rounded-2xl text-center space-y-3 shadow-lg shadow-gold-500/5">
+          <div class="w-12 h-12 rounded-full bg-amber-500/20 border border-gold-500/40 text-gold-400 mx-auto flex items-center justify-center text-lg">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <span class="text-[10px] uppercase tracking-widest text-gold-400 font-semibold block">Core Scent • 1 to 4 hours</span>
+          <h4 class="font-serif text-lg font-bold text-white">Heart Notes</h4>
+          <div id="detail-heart-notes" class="text-xs text-zinc-300 space-y-1"></div>
+        </div>
+
+        <!-- Base Notes -->
+        <div class="glass-panel border border-zinc-800 p-6 rounded-2xl text-center space-y-3">
+          <div class="w-12 h-12 rounded-full bg-amber-500/10 border border-gold-500/30 text-gold-400 mx-auto flex items-center justify-center text-lg">
+            <i class="fa-solid fa-tree"></i>
+          </div>
+          <span class="text-[10px] uppercase tracking-widest text-gold-400 font-semibold block">Dry Down • 4 to 16+ hours</span>
+          <h4 class="font-serif text-lg font-bold text-white">Base Notes</h4>
+          <div id="detail-base-notes" class="text-xs text-zinc-300 space-y-1"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Related Fragrances -->
+    <div class="mt-20 pt-16 border-t border-zinc-800">
+      <div class="flex justify-between items-end mb-8">
+        <div>
+          <span class="text-xs uppercase tracking-[0.3em] text-gold-400 font-semibold">Recommendations</span>
+          <h3 class="text-2xl font-serif font-bold text-white mt-1">COMPLEMENTARY CREATIONS</h3>
+        </div>
+        <a href="shop.html" class="text-xs uppercase tracking-wider text-gold-400 hover:text-gold-300">View All</a>
+      </div>
+
+      <div id="detail-related-grid" class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Slide-out Cart Drawer -->
+  <div id="cart-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden transition-opacity duration-300"></div>
+  <aside id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-zinc-950 border-l border-gold-500/20 z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+    <div class="p-6 border-b border-zinc-800 flex items-center justify-between bg-zinc-900/50">
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-bag-shopping text-gold-400"></i>
+        <h3 class="font-serif font-bold text-white text-base tracking-wider uppercase">Your Luxury Bag</h3>
+      </div>
+      <button id="close-cart-btn" class="w-8 h-8 rounded-full bg-zinc-800 text-zinc-400 hover:text-white flex items-center justify-center transition">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="px-6 py-3 bg-zinc-900/90 border-b border-zinc-800 text-xs text-center" id="cart-drawer-shipping-note">
+      Add more to unlock Free Express Worldwide Shipping
+    </div>
+    <div class="flex-1 overflow-y-auto p-6 space-y-4" id="cart-drawer-items"></div>
+    <div id="cart-drawer-empty" class="hidden flex-1 flex flex-col items-center justify-center p-8 text-center">
+      <div class="w-16 h-16 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-600 text-2xl mb-3">
+        <i class="fa-solid fa-bag-shopping"></i>
+      </div>
+      <h4 class="font-serif text-white font-semibold">Your bag is empty</h4>
+    </div>
+    <div id="cart-drawer-footer" class="p-6 border-t border-zinc-800 bg-zinc-900/60 space-y-4">
+      <div class="flex justify-between items-center">
+        <span class="text-xs uppercase tracking-wider text-zinc-400 font-medium">Estimated Subtotal</span>
+        <span id="cart-drawer-subtotal" class="font-serif text-lg font-bold text-gold-400">$0.00</span>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <a href="cart.html" class="py-3 px-4 text-center rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-medium text-xs uppercase tracking-wider transition border border-zinc-700">
+          View Cart Page
+        </a>
+        <a href="checkout.html" class="py-3 px-4 text-center rounded-xl bg-gold-gradient text-black font-semibold text-xs uppercase tracking-wider hover:opacity-90 transition flex items-center justify-center gap-1.5 shadow-lg shadow-gold-500/20">
+          <span>Checkout</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Global Live Search Modal -->
+  <div id="search-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-start justify-center pt-20 px-4">
+    <div class="bg-zinc-950 border border-gold-500/30 rounded-2xl w-full max-w-2xl overflow-hidden shadow-2xl">
+      <div class="p-4 border-b border-zinc-800 flex items-center gap-3">
+        <i class="fa-solid fa-magnifying-glass text-gold-400 text-lg"></i>
+        <input type="text" id="global-search-input" placeholder="Search by name, notes..." class="flex-1 bg-transparent text-white text-base focus:outline-none placeholder-zinc-500" />
+        <button id="close-search-modal" class="text-zinc-400 hover:text-white p-2">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      <div id="search-results-list" class="max-h-96 overflow-y-auto p-4 space-y-2"></div>
+    </div>
+  </div>
+
+  <!-- Luxury Footer -->
+  <footer class="bg-black border-t border-zinc-800/80 pt-16 pb-12 text-zinc-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-zinc-800">
+        <div class="space-y-3">
+          <span class="font-serif text-xl font-bold tracking-[0.2em] text-gold-gradient">AZZARO PARIS</span>
+          <p class="text-xs text-zinc-500">Haute Parfumerie with magnetic Mediterranean warmth since 1978.</p>
+        </div>
+        <div>
+          <h5 class="text-white font-serif uppercase tracking-wider mb-2">Explore</h5>
+          <ul class="space-y-1.5 text-zinc-400">
+            <li><a href="shop.html?category=men" class="hover:text-gold-400">Men's Fragrances</a></li>
+            <li><a href="shop.html?category=women" class="hover:text-gold-400">Women's Fragrances</a></li>
+            <li><a href="shop.html?category=luxury" class="hover:text-gold-400">Private Reserve</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-white font-serif uppercase tracking-wider mb-2">Support</h5>
+          <ul class="space-y-1.5 text-zinc-400">
+            <li><a href="cart.html" class="hover:text-gold-400">Shopping Cart</a></li>
+            <li><a href="contact.html" class="hover:text-gold-400">Customer Concierge</a></li>
+            <li><a href="about.html" class="hover:text-gold-400">House Heritage</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-white font-serif uppercase tracking-wider mb-2">Authenticity</h5>
+          <p class="text-zinc-500 text-xs">All bottles sold are authentic Azzaro Paris creations with original sealed flacons.</p>
+        </div>
+      </div>
+      <div class="pt-6 text-center text-zinc-600 text-[11px]">
+        © 2026 Azzaro Paris Parfums. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Product Detail Logic -->
+  <script>
+    let currentProduct = null;
+    let selectedSize = null;
+    let selectedQuantity = 1;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get('id') || 'azzaro-the-most-wanted-edp';
+      currentProduct = getProductById(productId);
+
+      if (currentProduct) {
+        renderProductDetail(currentProduct);
+      }
+    });
+
+    function renderProductDetail(p) {
+      document.title = `${p.name} | Azzaro Paris Haute Parfumerie`;
+      document.getElementById('breadcrumb-product-name').textContent = p.name;
+      document.getElementById('detail-name').textContent = p.name;
+      document.getElementById('detail-subtitle').textContent = p.subtitle;
+      document.getElementById('detail-desc').textContent = p.description;
+      document.getElementById('detail-family').textContent = p.fragranceFamily;
+      document.getElementById('detail-badge').textContent = p.badge || 'Haute Parfumerie';
+      document.getElementById('detail-badge').className = `absolute top-5 left-5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${p.badgeColor || 'bg-amber-500'} text-white shadow`;
+      
+      document.getElementById('detail-rating-text').textContent = `${p.rating} (${p.reviewsCount} reviews)`;
+      document.getElementById('detail-stars').innerHTML = '<i class="fa-solid fa-star"></i>'.repeat(Math.floor(p.rating));
+
+      document.getElementById('detail-longevity').textContent = p.longevity || '10-12 Hours';
+      document.getElementById('detail-sillage').textContent = p.sillage || 'Magnetic';
+      document.getElementById('detail-season').textContent = p.season || 'All Year Round';
+
+      // Images
+      const mainImg = document.getElementById('detail-main-img');
+      mainImg.src = p.image;
+      mainImg.alt = p.name;
+
+      const thumbsContainer = document.getElementById('detail-thumbnails');
+      thumbsContainer.innerHTML = p.gallery.map((imgUrl, idx) => `
+        <button onclick="setMainImage('${imgUrl}', this)" class="detail-thumb-btn w-16 h-20 rounded-xl overflow-hidden border ${idx === 0 ? 'border-gold-400 ring-2 ring-gold-500/20' : 'border-zinc-800 opacity-60 hover:opacity-100'} p-1 bg-zinc-900 transition">
+          <img src="${imgUrl}" alt="Gallery ${idx + 1}" class="w-full h-full object-contain" />
+        </button>
+      `).join('');
+
+      // Scent pyramid
+      document.getElementById('detail-top-notes').innerHTML = p.topNotes.map(n => `<p class="font-medium text-zinc-200">${n}</p>`).join('');
+      document.getElementById('detail-heart-notes').innerHTML = p.heartNotes.map(n => `<p class="font-medium text-zinc-200">${n}</p>`).join('');
+      document.getElementById('detail-base-notes').innerHTML = p.baseNotes.map(n => `<p class="font-medium text-zinc-200">${n}</p>`).join('');
+
+      // Sizes
+      selectedSize = p.sizes[0].size;
+      updatePriceDisplay(p.sizes[0].price);
+
+      const sizesContainer = document.getElementById('detail-sizes-container');
+      sizesContainer.innerHTML = p.sizes.map((s, idx) => `
+        <button type="button" onclick="selectDetailSize('${s.size}', ${s.price}, this)" class="detail-size-btn px-4 py-2.5 rounded-xl border text-xs font-semibold uppercase tracking-wider transition ${idx === 0 ? 'border-gold-400 bg-amber-500/10 text-gold-300' : 'border-zinc-800 bg-zinc-900 text-zinc-300 hover:border-zinc-600'}">
+          ${s.size} • $${s.price.toFixed(2)}
+        </button>
+      `).join('');
+
+      // Related products
+      const related = getAllProducts().filter(prod => prod.id !== p.id).slice(0, 3);
+      const relatedGrid = document.getElementById('detail-related-grid');
+      relatedGrid.innerHTML = related.map(rp => `
+        <div class="glass-panel border border-zinc-800 rounded-2xl p-4 flex flex-col justify-between hover:border-gold-500/30 transition">
+          <a href="product-detail.html?id=${rp.id}" class="bg-zinc-900 rounded-xl p-4 flex items-center justify-center">
+            <img src="${rp.image}" alt="${rp.name}" class="h-44 object-contain" />
+          </a>
+          <div class="mt-3">
+            <span class="text-[10px] uppercase text-gold-400 font-semibold">${rp.fragranceFamily}</span>
+            <h4 class="font-serif text-white font-bold text-sm mt-0.5"><a href="product-detail.html?id=${rp.id}">${rp.name}</a></h4>
+            <div class="flex justify-between items-center mt-3 pt-2 border-t border-zinc-800">
+              <span class="text-sm font-bold text-gold-400">$${rp.price.toFixed(2)}</span>
+              <div class="flex items-center gap-1.5">
+                <button onclick="openQuickBuyModal('${rp.id}', '${rp.sizes[0].size}')" class="px-2.5 py-1 text-xs bg-gold-gradient text-black font-bold rounded-lg transition hover:opacity-90">
+                  ⚡ Buy
+                </button>
+                <button onclick="addToCart('${rp.id}', '${rp.sizes[0].size}', 1)" class="px-2 py-1 text-xs bg-zinc-800 hover:bg-zinc-700 rounded-lg transition text-zinc-300">
+                  + Bag
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function setMainImage(url, btn) {
+      document.getElementById('detail-main-img').src = url;
+      document.querySelectorAll('.detail-thumb-btn').forEach(b => {
+        b.className = 'detail-thumb-btn w-16 h-20 rounded-xl overflow-hidden border border-zinc-800 opacity-60 hover:opacity-100 p-1 bg-zinc-900 transition';
+      });
+      btn.className = 'detail-thumb-btn w-16 h-20 rounded-xl overflow-hidden border border-gold-400 ring-2 ring-gold-500/20 p-1 bg-zinc-900 transition';
+    }
+
+    function selectDetailSize(size, price, btn) {
+      selectedSize = size;
+      updatePriceDisplay(price);
+      document.querySelectorAll('.detail-size-btn').forEach(b => {
+        b.className = 'detail-size-btn px-4 py-2.5 rounded-xl border border-zinc-800 bg-zinc-900 text-zinc-300 hover:border-zinc-600 text-xs font-semibold uppercase tracking-wider transition';
+      });
+      btn.className = 'detail-size-btn px-4 py-2.5 rounded-xl border border-gold-400 bg-amber-500/10 text-gold-300 text-xs font-semibold uppercase tracking-wider transition';
+    }
+
+    function updatePriceDisplay(price) {
+      document.getElementById('detail-price').textContent = `$${price.toFixed(2)}`;
+      const orig = price * 1.22;
+      document.getElementById('detail-orig-price').textContent = `$${orig.toFixed(2)}`;
+    }
+
+    function changeQty(delta) {
+      selectedQuantity = Math.max(1, selectedQuantity + delta);
+      document.getElementById('detail-qty').textContent = selectedQuantity;
+    }
+
+    function handleDetailInstantOrderModal() {
+      if (!currentProduct) return;
+      openQuickBuyModal(currentProduct.id, selectedSize);
+    }
+
+    function handleDetailAddToCart() {
+      if (!currentProduct) return;
+      addToCart(currentProduct.id, selectedSize, selectedQuantity);
+    }
+
+    function handleDetailInstantBuy() {
+      if (!currentProduct) return;
+      addToCart(currentProduct.id, selectedSize, selectedQuantity, false);
+      window.location.href = 'checkout.html';
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Heritage & Craftsmanship | Azzaro Paris</title>
+  <meta name="description" content="Discover the storied history, master perfumers, and sustainable botanical sourcing behind Azzaro Paris perfumes.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              300: '#f7e7b4',
+              400: '#e5c158',
+              500: '#d4af37',
+              600: '#aa7c11',
+              700: '#805d0d'
+            },
+            dark: {
+              950: '#070709',
+              900: '#0c0c0f',
+              850: '#121217',
+              800: '#181820',
+              700: '#23232e'
+            }
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            editorial: ['Playfair Display', 'serif'],
+            sans: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark-950 text-zinc-100 antialiased selection:bg-gold-500 selection:text-black">
+
+  <!-- Announcement Bar -->
+  <div class="bg-gradient-to-r from-zinc-950 via-amber-950/60 to-zinc-950 border-b border-gold-500/20 py-2 px-4 text-center text-xs tracking-wider text-amber-200">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="hidden md:flex items-center gap-2 text-zinc-400">
+        <i class="fa-solid fa-certificate text-gold-500 text-[10px]"></i>
+        <span>100% Authentic Azzaro Paris Guaranteed</span>
+      </div>
+      <div class="mx-auto flex items-center gap-2">
+        <span class="text-gold-400">✨</span>
+        <span>Free Worldwide Express Shipping On Orders Over $150</span>
+      </div>
+      <div class="hidden md:flex items-center gap-4 text-zinc-400">
+        <a href="contact.html" class="hover:text-gold-400 transition">VIP Concierge</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 glass-nav transition duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <button id="mobile-menu-toggle" class="lg:hidden text-zinc-300 hover:text-gold-400 p-2">
+          <i class="fa-solid fa-bars-staggered text-xl"></i>
+        </button>
+
+        <a href="index.html" class="flex flex-col items-center group">
+          <span class="font-serif text-2xl md:text-3xl font-bold tracking-[0.25em] text-gold-gradient group-hover:scale-105 transition-transform duration-300">
+            AZZARO
+          </span>
+          <span class="text-[9px] uppercase tracking-[0.45em] text-zinc-400 font-light -mt-1">
+            PARIS • HAUTE PARFUMERIE
+          </span>
+        </a>
+
+        <nav class="hidden lg:flex items-center space-x-8 text-xs uppercase tracking-[0.2em] font-medium text-zinc-300">
+          <a href="index.html" class="hover:text-gold-400 transition pb-1">Home</a>
+          <a href="shop.html" class="hover:text-gold-400 transition pb-1">Shop All</a>
+          <a href="shop.html?category=men" class="hover:text-gold-400 transition pb-1">Men's Scents</a>
+          <a href="shop.html?category=women" class="hover:text-gold-400 transition pb-1">Women's Scents</a>
+          <a href="shop.html?category=luxury" class="hover:text-gold-400 transition pb-1">Private Reserve</a>
+          <a href="about.html" class="text-gold-400 border-b border-gold-400 pb-1">Heritage</a>
+          <a href="contact.html" class="hover:text-gold-400 transition pb-1">Boutiques</a>
+        </nav>
+
+        <div class="flex items-center space-x-5">
+          <button class="open-search-modal text-zinc-300 hover:text-gold-400 transition p-2">
+            <i class="fa-solid fa-magnifying-glass text-lg"></i>
+          </button>
+          <button class="open-cart-btn relative p-2.5 rounded-full bg-zinc-900 border border-gold-500/30 text-gold-400 hover:bg-gold-500 hover:text-black transition duration-300 flex items-center justify-center">
+            <i class="fa-solid fa-bag-shopping text-base"></i>
+            <span class="cart-badge-count hidden absolute -top-1 -right-1 w-5 h-5 bg-amber-500 text-black font-bold text-[10px] rounded-full flex items-center justify-center border-2 border-dark-950">
+              0
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-zinc-950 border-b border-gold-500/20 px-6 py-6 space-y-4">
+      <div class="flex flex-col space-y-3 text-sm tracking-widest uppercase font-medium text-zinc-300">
+        <a href="index.html" class="hover:text-gold-400">Home</a>
+        <a href="shop.html" class="hover:text-gold-400">Shop All Fragrances</a>
+        <a href="shop.html?category=men" class="hover:text-gold-400">Men's Collection</a>
+        <a href="shop.html?category=women" class="hover:text-gold-400">Women's Collection</a>
+        <a href="shop.html?category=luxury" class="hover:text-gold-400">Private Reserve</a>
+        <a href="about.html" class="text-gold-400">The House of Azzaro</a>
+        <a href="contact.html" class="hover:text-gold-400">Boutiques</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative py-24 bg-gradient-to-b from-dark-950 via-zinc-900 to-dark-950 overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 text-center space-y-6 relative z-10">
+      <span class="text-xs uppercase tracking-[0.35em] text-gold-400 font-semibold">Haute Parfumerie Since 1978</span>
+      <h1 class="text-4xl sm:text-6xl font-serif font-bold text-white tracking-tight">THE HOUSE OF AZZARO</h1>
+      <p class="text-zinc-300 text-base sm:text-lg font-light leading-relaxed">
+        Born under the warmth of the Mediterranean sun and perfected in the high-fashion ateliers of Paris, Azzaro was created to celebrate the pure joy of living with audacity, charisma, and glamour.
+      </p>
+    </div>
+  </section>
+
+  <!-- Story Pillars -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-24">
+    
+    <!-- Pillar 1: Loris Azzaro -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="space-y-5">
+        <span class="text-xs uppercase tracking-[0.3em] text-gold-400 font-semibold">The Founder</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">LORIS AZZARO & THE SPIRIT OF HEDONISM</h2>
+        <p class="text-zinc-300 text-sm leading-relaxed">
+          Tunisian-born of Sicilian descent, Loris Azzaro envisioned a world of eternal celebration. In 1968, he founded his Paris couture fashion house, quickly dressing international icons from Sophia Loren to Brigitte Bardot.
+        </p>
+        <p class="text-zinc-400 text-sm leading-relaxed">
+          In 1978, he unveiled <strong>Azzaro Pour Homme</strong> — an instant global triumph formulated with an unheard-of 320 raw essences. It established the house as a vanguard of masculine seduction and Mediterranean vitality.
+        </p>
+        <div class="p-4 bg-zinc-900 rounded-xl border border-gold-500/30">
+          <p class="font-editorial italic text-gold-300 text-sm">"All my senses are seduced by the sun, the sea, and the fragrance of orange blossoms."</p>
+          <span class="block text-right text-[10px] uppercase text-zinc-500 mt-1">— Loris Azzaro</span>
+        </div>
+      </div>
+      <div class="rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80" alt="Loris Azzaro Vintage Heritage" class="w-full h-[420px] object-cover hover:scale-105 transition duration-700" />
+      </div>
+    </div>
+
+    <!-- Pillar 2: Craftsmanship & Sourcing -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="order-2 lg:order-1 rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl">
+        <img src="https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?auto=format&fit=crop&w=800&q=80" alt="Grasse Perfumery Laboratory" class="w-full h-[420px] object-cover hover:scale-105 transition duration-700" />
+      </div>
+      <div class="order-1 lg:order-2 space-y-5">
+        <span class="text-xs uppercase tracking-[0.3em] text-gold-400 font-semibold">Artisanal Mastery</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">THE GRASSE ATELIER & RARE BOTANICALS</h2>
+        <p class="text-zinc-300 text-sm leading-relaxed">
+          From the perfume capital of Grasse in the French Riviera, our master perfumers — including Olivier Pescheux, Quentin Bisch, and Fabrice Pellegrin — sculpt olfactive narratives that linger across hours.
+        </p>
+        <div class="grid grid-cols-2 gap-4 pt-2">
+          <div class="p-4 bg-zinc-900 rounded-xl border border-zinc-800">
+            <h4 class="font-serif font-bold text-white text-sm">Guatemalan Cardamom</h4>
+            <p class="text-xs text-zinc-400 mt-1">Fair-trade spicy zest harvested from biodiverse mountain communities.</p>
+          </div>
+          <div class="p-4 bg-zinc-900 rounded-xl border border-zinc-800">
+            <h4 class="font-serif font-bold text-white text-sm">Bourbon Vanilla</h4>
+            <p class="text-xs text-zinc-400 mt-1">Slow-cured dark pods from Madagascar providing rich, caramel warmth.</p>
+          </div>
+          <div class="p-4 bg-zinc-900 rounded-xl border border-zinc-800">
+            <h4 class="font-serif font-bold text-white text-sm">Calabrian Bergamot</h4>
+            <p class="text-xs text-zinc-400 mt-1">Sun-drenched citrus providing dazzling, sparkling top notes.</p>
+          </div>
+          <div class="p-4 bg-zinc-900 rounded-xl border border-zinc-800">
+            <h4 class="font-serif font-bold text-white text-sm">Cambodian Agarwood</h4>
+            <p class="text-xs text-zinc-400 mt-1">Aged wild oud resin for hypnotic Private Reserve elixirs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pillar 3: Iconic Flacon Architecture -->
+    <div class="glass-panel border border-gold-500/30 rounded-3xl p-8 sm:p-12">
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+        <span class="text-xs uppercase tracking-[0.3em] text-gold-400 font-semibold">Sculptural Elegance</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">ARCHITECTURAL BOTTLE DESIGN</h2>
+        <p class="text-xs text-zinc-400">Every Azzaro flacon is engineered to feel weighty, magnetic, and unmistakably distinct.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center space-y-3 p-4">
+          <div class="w-16 h-16 rounded-full bg-amber-500/10 border border-gold-500/30 text-gold-400 flex items-center justify-center text-2xl mx-auto">
+            <i class="fa-solid fa-gun"></i>
+          </div>
+          <h4 class="font-serif font-bold text-white text-base">The Wanted Cylinder</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed">Inspired by the mechanical chamber of a luxury timepiece and revolver cylinder. A declaration of audacious masculinity.</p>
+        </div>
+
+        <div class="text-center space-y-3 p-4 border-y md:border-y-0 md:border-x border-zinc-800">
+          <div class="w-16 h-16 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center text-2xl mx-auto">
+            <i class="fa-solid fa-cube"></i>
+          </div>
+          <h4 class="font-serif font-bold text-white text-base">The Chrome Horizon</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed">Solid pure crystal block mirroring the limitless blue horizons of the Mediterranean coast and silver sea crests.</p>
+        </div>
+
+        <div class="text-center space-y-3 p-4">
+          <div class="w-16 h-16 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-400 flex items-center justify-center text-2xl mx-auto">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+          <h4 class="font-serif font-bold text-white text-base">The Mademoiselle Bow</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed">Faceted cut-glass crystal tied with an iconic Parisian silk bow — a tribute to Loris Azzaro's legendary haute couture gowns.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-dark-900 border-t border-zinc-800 text-center">
+    <div class="max-w-2xl mx-auto px-4 space-y-6">
+      <h3 class="font-serif text-3xl font-bold text-white">DISCOVER YOUR AZZARO SIGNATURE</h3>
+      <p class="text-xs text-zinc-400">Order directly from our official online boutique with 100% authenticity guarantee, free luxury samples, and worldwide express courier delivery.</p>
+      <a href="shop.html" class="inline-block px-8 py-4 bg-gold-gradient text-black font-semibold rounded-xl text-xs uppercase tracking-widest hover:opacity-90 transition shadow-lg shadow-gold-500/20">
+        Explore Complete Catalogue
+      </a>
+    </div>
+  </section>
+
+  <!-- Slide-out Cart Drawer -->
+  <div id="cart-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden transition-opacity duration-300"></div>
+  <aside id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-zinc-950 border-l border-gold-500/20 z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+    <div class="p-6 border-b border-zinc-800 flex items-center justify-between bg-zinc-900/50">
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-bag-shopping text-gold-400"></i>
+        <h3 class="font-serif font-bold text-white text-base tracking-wider uppercase">Your Luxury Bag</h3>
+      </div>
+      <button id="close-cart-btn" class="w-8 h-8 rounded-full bg-zinc-800 text-zinc-400 hover:text-white flex items-center justify-center transition">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="flex-1 overflow-y-auto p-6 space-y-4" id="cart-drawer-items"></div>
+    <div id="cart-drawer-empty" class="hidden flex-1 flex flex-col items-center justify-center p-8 text-center">
+      <p class="text-zinc-400 text-xs">Your bag is empty.</p>
+    </div>
+    <div id="cart-drawer-footer" class="p-6 border-t border-zinc-800 bg-zinc-900/60 space-y-4">
+      <div class="flex justify-between items-center">
+        <span class="text-xs uppercase text-zinc-400">Subtotal</span>
+        <span id="cart-drawer-subtotal" class="font-serif font-bold text-gold-400">$0.00</span>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <a href="cart.html" class="py-3 px-4 text-center rounded-xl bg-zinc-800 text-white text-xs uppercase tracking-wider">Cart</a>
+        <a href="checkout.html" class="py-3 px-4 text-center rounded-xl bg-gold-gradient text-black font-bold text-xs uppercase tracking-wider hover:opacity-90 transition">⚡ Buy Now (Checkout)</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Global Live Search Modal -->
+  <div id="search-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-start justify-center pt-20 px-4">
+    <div class="bg-zinc-950 border border-gold-500/30 rounded-2xl w-full max-w-2xl overflow-hidden shadow-2xl">
+      <div class="p-4 border-b border-zinc-800 flex items-center gap-3">
+        <i class="fa-solid fa-magnifying-glass text-gold-400 text-lg"></i>
+        <input type="text" id="global-search-input" placeholder="Search fragrances..." class="flex-1 bg-transparent text-white text-base focus:outline-none placeholder-zinc-500" />
+        <button id="close-search-modal" class="text-zinc-400 hover:text-white p-2">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      <div id="search-results-list" class="max-h-96 overflow-y-auto p-4 space-y-2"></div>
+    </div>
+  </div>
+
+  <!-- Luxury Footer -->
+  <footer class="bg-black border-t border-zinc-800/80 pt-16 pb-12 text-zinc-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-zinc-800">
+        <div class="space-y-3">
+          <span class="font-serif text-xl font-bold tracking-[0.2em] text-gold-gradient">AZZARO PARIS</span>
+          <p class="text-xs text-zinc-500">Haute Parfumerie with magnetic Mediterranean warmth since 1978.</p>
+        </div>
+        <div>
+          <h5 class="text-white font-serif uppercase tracking-wider mb-2">Explore</h5>
+          <ul class="space-y-1.5 text-zinc-400">
+            <li><a href="shop.html?category=men" class="hover:text-gold-400">Men's Fragrances</a></li>
+            <li><a href="shop.html?category=women" class="hover:text-gold-400">Women's Fragrances</a></li>
+            <li><a href="shop.html?category=luxury" class="hover:text-gold-400">Private Reserve</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-white font-serif uppercase tracking-wider mb-2">Support</h5>
+          <ul class="space-y-1.5 text-zinc-400">
+            <li><a href="cart.html" class="hover:text-gold-400">Shopping Cart</a></li>
+            <li><a href="contact.html" class="hover:text-gold-400">Customer Concierge</a></li>
+            <li><a href="about.html" class="hover:text-gold-400">House Heritage</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-white font-serif uppercase tracking-wider mb-2">Authenticity</h5>
+          <p class="text-zinc-500 text-xs">All bottles sold are authentic Azzaro Paris creations with original sealed flacons.</p>
+        </div>
+      </div>
+      <div class="pt-6 text-center text-zinc-600 text-[11px]">
+        © 2026 Azzaro Paris Parfums. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
